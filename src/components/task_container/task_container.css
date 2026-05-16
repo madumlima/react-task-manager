@@ -1,0 +1,12 @@
+.task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*border: 2px solid aqua;*/
+  width: 100%;
+  flex-grow: 1;
+}
+
+.no-tasks {
+  color: #99a1af;
+}
