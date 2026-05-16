@@ -1,7 +1,9 @@
+import MainContainer from "@/components/main_container/main_container";
+
 export default function Home() {
   return (
     <main>
-      <h1>Hello World!</h1>
+      <MainContainer></MainContainer>
     </main>
   );
 }
