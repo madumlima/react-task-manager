@@ -1,14 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import "./main_container.css";
 import TaskContainer from "../task_container/task_container.js";
 import TaskInput from "../task_input/task_input";
 import { FaPlus } from "react-icons/fa";
 
 export default function MainContainer() {
+  const [newTaskText, setNewTaskText] = useState("");
+
   return (
     <div className="main-container">
       <h1> Task Manager </h1>
       <div className="task-control">
-        <TaskInput></TaskInput>
+        <TaskInput
+          value={newTaskText}
+          onChange={(e) => setNewTaskText(e.target.value)}
+          placeholder={"Enter a new task..."}
+        ></TaskInput>
         <button>
           <FaPlus />
           Add
