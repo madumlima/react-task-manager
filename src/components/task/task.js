@@ -7,7 +7,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import TaskInput from "../task_input/task_input";
 
-export default function Task({ description }) {
+export default function Task({ description, id, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
 
   const [taskText, setTaskText] = useState(description);
@@ -26,6 +26,10 @@ export default function Task({ description }) {
 
   const handleCancelClick = () => {
     setIsEditing(false);
+  };
+
+  const handleDeleteClick = () => {
+    onDelete(id);
   };
 
   return (
@@ -59,7 +63,7 @@ export default function Task({ description }) {
             <button className="edit-button" onClick={handleEditClick}>
               <FaPencilAlt />
             </button>
-            <button className="delete-button">
+            <button className="delete-button" onClick={handleDeleteClick}>
               <FaRegTrashAlt />
             </button>
           </>

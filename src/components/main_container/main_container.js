@@ -22,6 +22,11 @@ export default function MainContainer() {
     setNewTaskText("");
   };
 
+  const handleDeleteTask = (id) => {
+    const updatedList = taskList.filter((task) => task.id !== id);
+    setTaskList(updatedList);
+  };
+
   return (
     <div className="main-container">
       <h1> Task Manager </h1>
@@ -36,7 +41,10 @@ export default function MainContainer() {
           Add
         </button>
       </div>
-      <TaskContainer taskList={taskList}></TaskContainer>
+      <TaskContainer
+        taskList={taskList}
+        onDelete={handleDeleteTask}
+      ></TaskContainer>
     </div>
   );
 }
