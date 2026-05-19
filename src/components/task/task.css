@@ -22,6 +22,10 @@
 	flex-grow: 1;
 }
 
+.task-content p {
+	word-break: break-word;
+}
+
 .checkbox {
 	width: 20px;
 	height: 20px;
