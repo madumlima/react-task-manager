@@ -18,9 +18,17 @@ export default function MainContainer() {
 			{
 				id: Date.now(),
 				description: newTaskText,
+				isCompleted: false,
 			},
 		]);
 		setNewTaskText("");
+	};
+
+	const handleToggleTaskCompleted = (id) => {
+		const updatedList = taskList.map((task) =>
+			task.id === id ? { ...task, isCompleted: !task.isCompleted } : task,
+		);
+		setTaskList(updatedList);
 	};
 
 	const handleDeleteTask = (id) => {
@@ -44,11 +52,14 @@ export default function MainContainer() {
 			</div>
 			<TaskContainer
 				taskList={taskList}
+				handleToggleTaskCompleted={handleToggleTaskCompleted}
 				onDelete={handleDeleteTask}
 			></TaskContainer>
-			{/* TODO: add the count of total tasks | completed tasks | pending tasks */}
 			<TaskCount
 				totalTaskCount={taskList.length}
+				completedTaskCount={
+					taskList.filter((task) => task.isCompleted === true).length
+				}
 				pendingTaskCount={taskList.length}
 			></TaskCount>
 		</div>
