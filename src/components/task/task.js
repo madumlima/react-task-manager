@@ -30,6 +30,12 @@ export default function Task({
 		setIsEditing(false);
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter") {
+			handleSaveClick();
+		}
+	};
+
 	const handleCancelClick = () => {
 		setIsEditing(false);
 	};
@@ -51,6 +57,7 @@ export default function Task({
 					<TaskInput
 						value={draftText}
 						onChange={(e) => setDraftText(e.target.value)}
+						onKeyDown={handleKeyDown}
 						placeholder=""
 					/>
 				) : (

@@ -24,6 +24,12 @@ export default function MainContainer() {
 		setNewTaskText("");
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter") {
+			handleAddClick();
+		}
+	};
+
 	const handleToggleTaskCompleted = (id) => {
 		const updatedList = taskList.map((task) =>
 			task.id === id ? { ...task, isCompleted: !task.isCompleted } : task,
@@ -44,6 +50,7 @@ export default function MainContainer() {
 					value={newTaskText}
 					onChange={(e) => setNewTaskText(e.target.value)}
 					placeholder={"Enter a new task..."}
+					onKeyDown={handleKeyDown}
 				></TaskInput>
 				<button onClick={handleAddClick}>
 					<FaPlus />
