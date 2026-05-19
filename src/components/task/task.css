@@ -1,66 +1,70 @@
 .task {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font: "Inter", sans-serif;
-  color: #1e2939;
-  gap: 1rem;
-  background-color: #f9fafb;
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 8px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font: "Inter", sans-serif;
+	color: #1e2939;
+	gap: 1rem;
+	background-color: #f9fafb;
+	border-radius: 10px;
+	padding: 16px;
+	margin-bottom: 8px;
 }
 
 .task-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
 }
 
 .task-content {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 .checkbox {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+.completed-task-text-decoration {
+	text-decoration: line-through;
 }
 
 .edit-button,
 .delete-button,
 .check-button,
 .cancel-button {
-  font-size: 1.2rem;
-  padding: 0.25rem;
-  background: none;
-  border: none;
+	font-size: 1.2rem;
+	padding: 0.25rem;
+	background: none;
+	border: none;
 }
 
 .edit-button {
-  color: #155dfc;
+	color: #155dfc;
 }
 
 .delete-button {
-  color: #e7000b;
+	color: #e7000b;
 }
 
 .edit-button:hover {
-  color: #184a94;
-  cursor: pointer;
+	color: #184a94;
+	cursor: pointer;
 }
 
 .delete-button:hover {
-  color: #990005;
-  cursor: pointer;
+	color: #990005;
+	cursor: pointer;
 }
 
 .check-button,
 .check-button:hover {
-  color: #00a63e;
-  cursor: pointer;
+	color: #00a63e;
+	cursor: pointer;
 }
 
 .cancel-button:hover {
-  cursor: pointer;
+	cursor: pointer;
 }

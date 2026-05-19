@@ -17,6 +17,7 @@ export default function TaskContainer({
 							key={task.id}
 							id={task.id}
 							description={task.description}
+							isCompleted={task.isCompleted}
 							handleToggleTaskCompleted={handleToggleTaskCompleted}
 							onDelete={onDelete}
 						></Task>

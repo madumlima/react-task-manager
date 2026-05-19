@@ -12,6 +12,7 @@ export default function Task({
 	id,
 	onDelete,
 	handleToggleTaskCompleted,
+	isCompleted,
 }) {
 	const [isEditing, setIsEditing] = useState(false);
 
@@ -40,7 +41,6 @@ export default function Task({
 	return (
 		<div className="task">
 			<div className="task-wrapper task-content">
-				{/* TODO: Create a handleCheckClick function to add a line-through on the task once it's completed */}
 				<input
 					type="checkbox"
 					className="checkbox"
@@ -54,7 +54,10 @@ export default function Task({
 						placeholder=""
 					/>
 				) : (
-					<p> {taskText} </p>
+					<p className={isCompleted ? "completed-task-text-decoration" : ""}>
+						{" "}
+						{taskText}{" "}
+					</p>
 				)}
 			</div>
 
