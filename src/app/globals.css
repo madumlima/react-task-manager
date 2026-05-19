@@ -12,6 +12,10 @@
 	font-family: "Segoe UI Emoji", sans-serif;
 }
 
+html {
+	min-width: 320px;
+}
+
 body {
 	display: flex;
 	align-items: center;

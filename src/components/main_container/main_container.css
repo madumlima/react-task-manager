@@ -53,4 +53,10 @@
 	.main-container {
 		width: 95%;
 	}
+
+	@media (max-width: 44.25rem) {
+		.task-control {
+			flex-direction: column;
+		}
+	}
 }
