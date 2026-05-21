@@ -7,3 +7,7 @@
 	color: #0a0a0aa9;
 	width: 100%;
 }
+
+.char-limit-reached {
+	border: 1px solid red;
+}
